@@ -1,0 +1,62 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "Sapians",
+      "language": "English",
+      "author": "Yuval Noah Harari",
+      "description": "History",
+      "price": 19.95,
+      "starRating": 4,
+      "imageUrl": "assets/images/sapians.jpg"
+    },
+    {
+      "bookId": 2,
+      "bookName": "Oliver Twist",
+      "language": "English",
+      "author": "Charles Dickens",
+      "description": "Page turner",
+      "price": 32.99,
+      "starRating": 3.9,
+      "imageUrl": "assets/images/oliverTwist.jpg"
+    },
+    {
+      "bookId": 5,
+      "bookName": "Soochiyum Noolum",
+      "language": "malayalam",
+      "author": "Indrans",
+      "description": "Curved claw steel hammer",
+      "price": 8.9,
+      "starRating": 3,
+      "imageUrl": "assets/images/soochiyum Noolum.jpg"
+    },
+    {
+      "bookId": 8,
+      "bookName": "Psycology of Money",
+      "language": "English",
+      "author": "Morgan Housel",
+      "description": "Insightful",
+      "price": 11.55,
+      "starRating": 4.5,
+      "imageUrl": "assets/images/POM.jpeg"
+    },
+    {
+      "bookId": 10,
+      "bookName": "Rich Dad poor Dad",
+      "language": "English",
+      "author": "Robert Kiyosaki",
+      "description": "Motivation",
+      "price": 35.95,
+      "starRating": 4.3,
+      "imageUrl": "assets/images/RichDadPoorDad.jpg"
+    },
+    {
+      "bookId": 10,
+      "bookName": "21 lessons for 21st century",
+      "language": "English",
+      "author": "Yuval Noah Harari",
+      "description": "Boring",
+      "price": 35.95,
+      "starRating": 4,
+      "imageUrl": "assets/images/21-lessons-for-the-21st-century.jpg"
+    }
+  ]

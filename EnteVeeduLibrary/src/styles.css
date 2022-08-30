@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+div.card-header {
+ font-size: x-large;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ background-color: brown;
+}
+
+div.card {
+  margin-top: 10px;
+  background-color:blanchedalmond;
+}
+
+.table {
+  margin-top: 10px
+}
+
+a {
+  text-decoration: none; 
+}
+
+a:hover {
+  text-decoration: underline;
+}
