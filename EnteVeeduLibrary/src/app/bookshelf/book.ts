@@ -1,5 +1,5 @@
 export interface IBook {
-    bookId: number;
+    id: number;
     bookName: string;
     language: string;
     author: string;
@@ -7,4 +7,5 @@ export interface IBook {
     description: string;
     starRating: number;
     imageUrl: string;
+    reader: string | undefined;
   }

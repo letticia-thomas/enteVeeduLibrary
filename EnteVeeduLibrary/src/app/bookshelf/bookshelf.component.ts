@@ -1,5 +1,8 @@
+import { CompileIdentifierMetadata } from "@angular/compiler";
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { Subscription } from "rxjs";
+import { AuthService } from "../shared/auth.service";
 import { IBook } from "./book";
 import { BookService } from "./book.service";
 
@@ -11,14 +14,16 @@ import { BookService } from "./book.service";
 
 export class BookShelfComponent implements OnInit{
     pageTitle: String = 'Book Shelf';
+    userName: string ='';
     errorMessage = '';
     books : IBook[] =[];
     imageWidth = 50;
     imageMargin = 2;
     showImage = false;
+    public isAuth :boolean = false;
     filteredBooks: IBook[] = [];
     sub : Subscription | undefined;
-    constructor(private BookService: BookService)
+    constructor(private BookService: BookService, private auth:AuthService,private router: Router)
     {
 
     }
@@ -49,10 +54,21 @@ export class BookShelfComponent implements OnInit{
           error : err => this.errorMessage =this.errorMessage
         })
     }
+    addNewBook(book:IBook):void
+    {
+      console.log(book);
+    }
     onRatingClicked(message: string): void {
         this.pageTitle = 'Book List: ' + message;
       }
     ngOnDestroy(): void{
       this.sub?.unsubscribe();
+    }
+    newBookAdd():void{
+      this.router.navigate(['/newbook']);
+    }
+    backToWelcome()
+    {
+      this.router.navigate(['/welcome']);
     }
 }

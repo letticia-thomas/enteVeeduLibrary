@@ -1,17 +1,22 @@
-﻿<div class="card">
-    <div class="card-header">
-      {{pageTitle}}
+﻿<h1>Login</h1>
+<hr>
+
+<div class="col-md-4">
+  
+  <form #loginForm ="ngForm" (ngSubmit)=login(loginForm.value)
+  autocomplete="off">
+    <div class="form-group" >
+      <label for="userName">User Name:</label>
+      <input (ngModel) ="user.username" name="username" id="username" type="text" class="form-control" placeholder="Username..." />
     </div>
-    <div class="card-body">
-      <div class="container-fluid">
-        <div class="text-center">
-          <img src="./assets/library.jpg"
-               class="img-responsive center-block"
-               style="max-height:500px;padding-bottom:50px" />
-        </div>
-        <div class="text-center">Developed by:</div>
-        <div class="text-center">
-          <h5>Letticia Thomas</h5>
-        </div>
+    <div class="form-group" >  
+      <label for="password">Password:</label>
+      <input (ngModel)="user.password" name="password" id="password" type="password" class="form-control"placeholder="Password..." />
     </div>
-  </div>
+        
+    <button type="submit" (click)='onClick()' class="btn btn-primary">Login</button>
+    <button type="button" (click)="addNewUser()" class="btn btn-default">First time here?</button>
+  </form>
+</div>
+
+

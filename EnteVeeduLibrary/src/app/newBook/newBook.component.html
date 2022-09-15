@@ -1,0 +1,43 @@
+<div>
+  <h1>Add Your Book </h1>
+  <hr>
+  <div class="col-md-6">
+      <div class="pageStyle">
+          <form autocomplete="off" #newBookForm="ngForm" (ngSubmit)=saveBook(newBookForm.value) novalidate>
+            <div class="form-group">
+              <label for="bookName">Book Name:</label>
+              <input class="textarea" (ngModel)="newBook.bookName" minlength="2" required name="bookName" id="bookName" type="text" class="form-control"  #bname="ngModel" placeholder="Name of your book..." />
+              <em class="alert" *ngIf="bname.touched && bname.invalid">please enter book name</em><br/>
+              <em class="alert" *ngIf="bname.errors && bname.dirty">min length is 2</em>
+            </div>
+
+              <div class="form-group">
+                 <label for="language">Language:</label>
+                 <input (ngModel)="newBook.language" name="language" id="language" type="text" class="form-control" placeholder="language..." />
+              </div>
+
+              <div class="form-group">
+                 <label for="author">Author:</label>
+                 <input (ngModel)="newBook.author" name="author" id="author" type="text" class="form-control" placeholder="Author..." /> 
+                </div>
+
+              <div class="form-group">
+                 <label for="description">Description:</label> 
+                <input (ngModel)="newBook.description" name="description" id="description" type="text" class="form-control" placeholder="Add your comments..." /> </div>
+
+              <div class="form-group"> 
+                <label for="price">Price:</label> 
+                <input (ngModel)="newBook.price"  pattern= "[0-9]" name="price" id="price" type="text" class="form-control" placeholder="Price..." #bprice ="ngModel"/>
+                <em class="alert" *ngIf="bprice.errors">Please enter a numeric value</em>
+               </div>
+
+               <div class="form-group">
+                 <label for="starRating">Rating:</label>
+                 <input (ngModel)="newBook.starRating" name="starRating" id="starRating" type="text" class="form-control" placeholder="Rating..." /> 
+                </div>
+
+              <button type="submit" class="btn btn-primary">Save</button> 
+              <button type="button" (click)="backToShelf()" class="btn btn-default">Bookshelf</button>
+          </form>
+      </div>
+  </div>

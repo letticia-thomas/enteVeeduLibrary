@@ -5,6 +5,10 @@ import { BookShelfComponent } from './bookshelf.component';
 import { SharedModule } from '../shared/shared.module';
 import { bookDetailComponent } from './book-detail.component';
 import { BookDetailGuard } from './book-detail.guard';
+import { newBookComponent } from '../newBook/newBook.component';
+import { FormsModule } from '@angular/forms';
+import { NewUserComponent } from '../new-user/new-user.component';
+
 
 
 
@@ -12,18 +16,27 @@ import { BookDetailGuard } from './book-detail.guard';
   declarations: [
     BookShelfComponent,
     bookDetailComponent,
+    newBookComponent,
+    NewUserComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
+    FormsModule,
     RouterModule.forChild([
       { path: 'bookshelf', component: BookShelfComponent },
       {
         path: 'bookshelf/:id',
-        canActivate: [BookDetailGuard],
+       canActivate: [BookDetailGuard],
         component: bookDetailComponent
-      }
+      },
+      {
+        path: 'newbook',
+        component: newBookComponent
+      },
+      { path: 'newuser', component: NewUserComponent}
     ]),
   ]
+  
 })
 export class BookModule { }

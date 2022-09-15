@@ -95,6 +95,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "EnteVeeduLibrary:build:production",
+            "firebaseProject": "myhomelibrary-699df",
+            "firebaseHostingSite": "myhomelibrary-699df"
+          }
         }
       }
     }

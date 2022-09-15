@@ -34,6 +34,11 @@
               </pm-star>
             </div>
           </div>
+
+          <div class='row'>
+            <div class='col-md-4'>Reader:</div>
+            <div class='col-md-8'>{{book.reader}}</div>
+          </div>
   
         <div class='col-md-4'>
           <img class='center-block img-responsive'
@@ -50,6 +55,11 @@
               style='width:80px'
               (click)='onBack()'>
         <i class='fa fa-chevron-left'></i> Back
+      </button>
+      <button *ngIf="editAuth" class='btn btn-outline-secondary'
+              style='width:80px'
+              >
+        <i class='fa fa-chevron-right'></i> Edit
       </button>
     </div>
   </div>

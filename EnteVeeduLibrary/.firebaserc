@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "myhomelibrary-699df": {
+      "hosting": {
+        "EnteVeeduLibrary": [
+          "myhomelibrary-699df"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "myhomelibrary-699df"
+  }
+}

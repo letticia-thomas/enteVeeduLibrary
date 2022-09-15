@@ -1,7 +1,10 @@
 <div class='card'>
+  <div>
+    <button (click)= "backToWelcome()" class=" login">Log Out</button>
   <div class='card-header'>
     {{pageTitle}}
   </div>
+
   <div class='card-body'>
     <div class='row'>
       <div class='col-md-2'>Filter by:</div>
@@ -10,6 +13,7 @@
                [(ngModel)]='listFilter' />
       </div>
     </div>
+   
     <div class='row'
          *ngIf='listFilter'>
       <div class='col-md-6'>
@@ -18,7 +22,8 @@
     </div>
     <div class='table-responsive'>
       <table class='table'
-             *ngIf='books.length'>
+             *ngIf= 'books.length' 
+             >
         <thead>
           <tr>
             <th>
@@ -44,7 +49,7 @@
                    [style.margin.px]='imageMargin'>
             </td>
             <td>
-              <a [routerLink]="['/bookshelf', book.bookId]">
+              <a [routerLink]="['/bookshelf', book.id]">
                 {{ book.bookName }}
               </a>
             </td>
@@ -61,6 +66,9 @@
       </table>
     </div>
   </div>
+</div>
+<div>
+  <button (click)='newBookAdd()'>Add Yours</button> 
 </div>
 <div *ngIf='errorMessage'
      class='alert alert-danger'>
