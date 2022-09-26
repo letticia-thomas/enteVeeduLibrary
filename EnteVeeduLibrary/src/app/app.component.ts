@@ -10,11 +10,11 @@ import { AuthService } from "./shared/auth.service";
         <a class='navbar-brand'>{{pageTitle}}</a>
         <ul class='nav nav-pills'>
         </ul>
-    </nav>
-    
+    </nav>  
    <div class='container'>
       <router-outlet></router-outlet>
     </div>
+    <br>
     `,
   styleUrls: ['./app.component.css']
 })
@@ -33,6 +33,6 @@ export class AppComponent implements OnInit {
     
 
   }
-  pageTitle = 'Welcome';
+  pageTitle = 'Ente veedu library';
   userName :String ='';
 }

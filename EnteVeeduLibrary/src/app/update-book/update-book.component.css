@@ -1,7 +1,4 @@
-.nav-link {
-    font-size: large;
-  }
-  .login {
+.login {
     background-color: blue;
     border: none;
     color: white;
@@ -14,10 +11,3 @@
     right: 10px;
     top: 7px;
   }
-  .navbar{
-    background-color: beige;
-    font-style: italic;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bolder;
-  }
-  

@@ -11,27 +11,35 @@ import { AuthService } from '../shared/auth.service';
 })
 export class NewUserComponent implements OnInit {
 
-  newUser ={} as IAuth;
+  newUser = {} as IAuth;
 
-  constructor(private auth:AuthService, private router:Router
-   ) { }
+  constructor(private auth: AuthService, private router: Router
+  ) { }
 
   ngOnInit(): void {
 
   }
-  addUser(formValue: IAuth):void{
-    
-    if(formValue.username && formValue.email && formValue.password)
-    {
-        this.newUser = formValue;
-        this.auth.addUser(this.newUser);
-        this.backToWelcome();
-    }
-    else{
-      alert("please fill necessary information!")
-    }
+  addUser(formValue: any): void {
+
+    if (formValue.username && formValue.email && formValue.password) {
+      
+        if (formValue.password === formValue.confirmPassword)
+        {
+          this.newUser = formValue;
+          this.auth.addUser(this.newUser);
+          this.backToWelcome();
+        }
+  
+        else {
+           alert("Confirmed password is incorrect!")
+            }
+          }
+        else {
+            alert("please fill necessary information!")
+        }
+  
   }
-  backToWelcome(){
+  backToWelcome() {
     this.router.navigate(['/welcome']);
   }
 

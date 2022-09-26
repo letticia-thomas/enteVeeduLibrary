@@ -1,0 +1,60 @@
+<button class='logout' style='width:80px' (click)="logout()">logout</button>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+    <section class="member-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="img-container">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="team member" class="img-full">
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-8">
+                    <div class="member_designation">
+                        <h2>{{name}}</h2>
+                        <span>Member</span>
+                    </div>
+                    <div class="member_desc">
+                        
+                       
+                    </div>
+                    <div class="bg-image " style="background-image: url('https://www.bootdey.com/img/Content/bg_element.jpg');">
+                        <div class="member_contact">
+                            <div class="row">
+                                <div class="col-lg-4  mb-3 mb-lg-0">
+                                    <div class="media-box">
+                                        <div class="media-icon">
+                                            <i class="fa fa-tablet" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="media-content">
+                                            <h5>Phone</h5>
+                                            <p><a href="callto">{{currentUser?.phone}}</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4  mb-3 mb-lg-0">
+                                    <div class="media-box">
+                                        <div class="media-icon">
+                                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="media-content">
+                                            <h5>Email</h5>
+                                            <p><a href="mailto">{{currentUser?.email}}</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="social-icons">
+                                        <a href="https://www.facebook.com/{{name}}" class="btn btn-social outlined"><i class="fa fa-facebook-f"></i></a>
+                                        <button class="btn btn-social outlined"><i class="fa fa-twitter"></i></button>
+                                        <button class="btn btn-social outlined"><i class="fa fa-linkedin"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button (click)="onBack()" type="button" class="btn btn-outline-success">Back to Bookshelf</button>
+      
+
+</div>

@@ -14,7 +14,7 @@ import { BookService } from "./book.service";
 
 export class BookShelfComponent implements OnInit{
     pageTitle: String = 'Book Shelf';
-    userName: string ='';
+    userName: string |undefined;
     errorMessage = '';
     books : IBook[] =[];
     imageWidth = 50;
@@ -25,7 +25,7 @@ export class BookShelfComponent implements OnInit{
     sub : Subscription | undefined;
     constructor(private BookService: BookService, private auth:AuthService,private router: Router)
     {
-
+      this.userName = this.auth.getCurrentUser()?.username;
     }
 
     private _listFilter = '';
@@ -67,8 +67,8 @@ export class BookShelfComponent implements OnInit{
     newBookAdd():void{
       this.router.navigate(['/newbook']);
     }
-    backToWelcome()
+    backToProfile()
     {
-      this.router.navigate(['/welcome']);
+      this.router.navigate(['/profile']);
     }
 }

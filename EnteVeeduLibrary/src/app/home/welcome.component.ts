@@ -12,26 +12,27 @@ export class WelcomeComponent {
   @Output() loginSuccessfull: EventEmitter<string> =
     new EventEmitter<string>();
 
-  user = {} as  IAuth ;
-  isAuth : boolean =false;
-  constructor(private auth:AuthService,private router: Router){}
-  
+  user = {} as IAuth;
+  isAuth: boolean = false;
+  constructor(private auth: AuthService, private router: Router) { }
+
   onClick(): void {
     this.loginSuccessfull.emit(`The rating ${this.user.username}was clicked!`);
   }
 
-  login(formValue:any):void{
+  login(formValue: any): void {
     console.log(formValue);
     this.user = formValue;
-    this.isAuth=this.auth.authCheck(this.user); 
-    if(this.isAuth)
+    this.auth.authCheck(this.user).subscribe((isAuth) => {
+      if (isAuth)
         this.router.navigate(['/bookshelf']);
-    else{
-      this.router.navigate(['/welcome']);
-      console.error("User not authorised!");
-    }
+      else {
+        this.router.navigate(['/welcome']);
+        console.error("User not authorised!");
+      }
+    });
   }
-  addNewUser():void{
+  addNewUser(): void {
     this.router.navigate(['/newuser']);
   }
 }

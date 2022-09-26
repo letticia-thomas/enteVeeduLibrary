@@ -1,86 +1,39 @@
 {
   "book": [
     {
-      "id": 1,
-      "bookName": "Sapians",
-      "language": "English",
-      "author": "Yuval Noah Harari",
-      "description": "History",
-      "price": 19.95,
-      "starRating": 4,
-      "reader": "Mareena Thomas",
-      "imageUrl": "assets/images/sapians.jpg"
-    },
-    {
-      "Id": 5,
-      "bookName": "Soochiyum Noolum",
-      "language": "malayalam",
-      "author": "Indrans",
-      "description": "Curved claw steel hammer",
-      "price": 8.9,
-      "starRating": 3,
-      "imageUrl": "assets/images/soochiyum Noolum.jpg",
-      "reader": "Letticia Thomas",
-      "id": 2
-    },
-    {
-      "bookName": "Think and grow rich",
-      "language": "English",
-      "author": "Nepolean Hill",
-      "description": "Inspiring",
-      "price": "12",
-      "id": 3,
-      "reader": "Letticia Thomas"
-    },
-    {
-      "bookName": "Oliver Twist",
-      "language": "English",
-      "author": "Charles Dickens",
-      "description": "Page turner",
-      "price": "12",
-      "starRating": "3.5",
-      "imageUrl": "assets/images/oliverTwist.jpg",
-      "id": 4,
-      "reader": "Letticia Thomas"
-    },
-    {
       "bookName": "Psycology of Money",
       "language": "English",
       "author": "Morgan Housel",
       "description": "Inspiring",
-      "price": "13",
       "starRating": "4",
-      "id": 5,
-      "reader": "Mareena Thomas"
+      "price": "11",
+      "availableOn": "Home Library",
+      "id": 1,
+      "reader": "Mareena Thomas",
+      "currentReader": "Niwin Anto"
     },
     {
       "bookName": "Randamoozham",
       "language": "Malayalam",
-      "author": "M D Vasudevan Nair",
+      "author": "M T Vasudevan Nair",
       "description": "Mind blowing",
-      "price": "178",
       "starRating": "5",
-      "id": 6,
-      "reader": "Mareena Thomas"
-    },
-    {
-      "bookName": "Bobanum Moliyum",
-      "language": "Malayalam",
-      "author": "Toms",
-      "description": "Kid's entertainer",
-      "price": "1",
-      "starRating": "4.4",
-      "id": 7,
-      "reader": "Mareena Thomas"
+      "price": "178",
+      "availableOn": "Storytel",
+      "id": 2,
+      "reader": "Mareena Thomas",
+      "currentReader": "Niwin Anto"
     },
     {
       "bookName": "Balarama",
       "language": "Malayalam",
       "author": "Manorama",
       "description": "Story Book",
-      "price": "1",
-      "starRating": "3",
-      "id": 8,
+      "starRating": "4.5",
+      "price": "2",
+      "availableOn": "Home Library",
+      "imageUrl": "https://www.bing.com/th?id=OIP.vAaT6YWQpPjM3LeN8VARPAHaJ4&w=150&h=200&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2",
+      "id": 3,
       "reader": "Letticia Thomas"
     },
     {
@@ -90,19 +43,89 @@
       "description": "Entertainer",
       "price": "2",
       "starRating": "3.8",
+      "id": 4,
+      "reader": "Niwin Anto"
+    },
+    {
+      "bookName": "Animal Farm",
+      "language": "english",
+      "author": "George orwel",
+      "description": "Political Satire",
+      "starRating": "4.5",
+      "price": "8",
+      "availableOn": "Amazon Kindle",
+      "id": 5,
+      "reader": "Letticia Thomas"
+    },
+    {
+      "bookName": "Think and grow rich",
+      "language": "English",
+      "author": "Nepolian Hill",
+      "description": "Inspiring",
+      "starRating": "3.5",
+      "price": "2",
+      "availableOn": "Amazon Kindle",
+      "id": 6,
+      "reader": "Mareena Thomas"
+    },
+    {
+      "bookName": "Sapians",
+      "language": "english",
+      "author": "Yuval Noah Harari",
+      "description": "History",
+      "price": "23",
+      "starRating": "4",
+      "imageUrl": "assets/images/sapians.jpg",
+      "availableOn": "Audible",
+      "id": 7,
+      "reader": "Letticia Thomas"
+    },
+    {
+      "bookName": "Oliver Twist",
+      "language": "English",
+      "author": "Charles Dickens",
+      "description": "Page turner",
+      "price": "4",
+      "starRating": "3.8",
+      "imageUrl": "assets/images/oliverTwist.jpg",
+      "availableOn": "Storytel",
+      "id": 8,
+      "reader": "Niwin Anto",
+      "currentReader": "Letticia Thomas"
+    },
+    {
+      "bookName": "Rich Dad poor Dad",
+      "language": "English",
+      "author": "Robert Kiyosaki",
+      "description": "Motivation",
+      "starRating": 4.3,
+      "price": 35.95,
+      "availableOn": "Home Library",
       "id": 9,
+      "reader": "Niwin Anto"
+    },
+    {
+      "bookName": "21 lessons for 21st century",
+      "language": "English",
+      "author": "Yuval Noah Harari",
+      "description": "Boring",
+      "starRating": 4,
+      "price": 35.95,
+      "availableOn": "Storytel",
+      "id": 10,
       "reader": "Niwin Anto"
     }
   ],
   "users": [
     {
-      "username": "letticia",
-      "firstName": "Letticia",
-      "lastName": "Thomas",
+      "bookCount": 1,
       "email": "letticia.thomas@sap.com",
-      "phone": "+420 770672760",
+      "firstName": "Letticia",
+      "id": 1,
+      "lastName": "Thomas",
       "password": "123",
-      "id": 1
+      "phone": "+420 770672760",
+      "username": "letti"
     },
     {
       "username": "mareena",
@@ -120,7 +143,8 @@
       "email": "niwinantop@gmail.com",
       "phone": "6677889",
       "password": "qwerty",
-      "id": 3
+      "id": 3,
+      "bookCount": 1
     },
     {
       "username": "alan",
@@ -132,13 +156,13 @@
       "id": 4
     },
     {
-      "username": "q",
-      "firstName": "q",
-      "lastName": "q",
-      "email": "q",
-      "phone": "1",
-      "password": "1",
-      "id": 5
+      "username": "nithin",
+      "firstName": "Nithin",
+      "lastName": "Anto",
+      "email": "nithinantop@gmail.com",
+      "phone": "1234",
+      "password": "123",
+      "id": 6
     }
   ]
 }

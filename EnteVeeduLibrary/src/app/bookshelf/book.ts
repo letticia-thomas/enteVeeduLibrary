@@ -1,4 +1,5 @@
 export interface IBook {
+    forEach(arg0: (item: any) => void): unknown;
     id: number;
     bookName: string;
     language: string;
@@ -8,4 +9,6 @@ export interface IBook {
     starRating: number;
     imageUrl: string;
     reader: string | undefined;
+    availableOn : string;
+    currentReader:string |undefined;
   }

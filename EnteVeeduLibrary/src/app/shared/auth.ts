@@ -5,4 +5,6 @@ export interface IAuth {
     password: string;
     email: string;
     phone: number;
+    bookCount: number;
+    id:number;
 }
